@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daftar Alumni - Fakultas Ilmu Komputer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .alumni-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .alumni-item {
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .alumni-item:hover {
+            background-color: #e0f7fa; 
+            transform: scale(1.02); 
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+    <script>
+        function filterAlumni() {
+            const input = document.getElementById('search');
+            const filter = input.value.toLowerCase();
+            const alumniList = document.getElementById('alumniList');
+            const alumniItems = alumniList.getElementsByTagName('li');
+
+            for (let i = 0; i < alumniItems.length; i++) {
+                const item = alumniItems[i];
+                const text = item.textContent || item.innerText;
+                item.style.display = text.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="fkom-uniku.png" alt="" width="30%" >
+        <h1>Fakultas Ilmu Komputer</h1>
+        <h2>Universitas Kuningan</h2>
+        <p>Alamat: Jl. Pramuka No.67, Purwawinangun, Kec. Kuningan, Kabupaten Kuningan, Jawa Barat 45512</p>
+        <hr>
+    </header>
+    <section>
+        <h1>Profil Alumni</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Cari alumni..." onkeyup="filterAlumni()">
+        </div>
+        <ul class="alumni-list" id="alumniList">
+            <li class="alumni-item" data-program="Sistem Informasi">Andi Setiawan - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Teknik Informatika">Budi Santoso - Teknik Informatika</li>
+            <li class="alumni-item" data-program="Desain Komunikasi Visual">Citra Dewi - Desain Komunikasi Visual</li>
+            <li class="alumni-item" data-program="Manajemen Informatika">Dewi Lestari - Manajemen Informatika</li>
+            <li class="alumni-item" data-program="Sistem Informasi">Eko Prabowo - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">Deni Haryanto - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">Ahmad Firdaus Sulintang - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">M. Harun Al- rasyid - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">Zulham Permata - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">M. Rizal Nugraha - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">Addiansyah Nur Fajri - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">M. Ferry Darmawan - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">Adi Amirullah - Sistem Informasi</li>
+            <li class="alumni-item" data-program="Sistem Informasi">Dimas Setiadi - Sistem Informasi</li>
+        </ul>
+    </section>
+    <footer>
+        &copy; 2023 Universitas Kuningan. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi dan Scope dalam Javascrip</title>
+</head>
+<body>
+    <script>
+        //fungsi sederhana
+        function tambah(a,b){
+            return a+b;
+        }
+
+        //fungsi dengan parameter default
+        function outerFunction(){
+            let outerVar="Variabel luar";
+            function innerFunction(){
+                let innerVar="Variabel Dalam";
+                console.log(outerVar);
+                console.log(innerVar);
+            }
+            innerFunction();
+        }
+
+        //memanggil fungsi 
+        console.log("Hasil penjumlahan: "+tambah(5,10));
+        greet("Jhon");
+        outerFunction();
+
+        //scope
+        let globalVar="Variabel Global";
+        function checkScope(){
+            let localVar="Variable Lokal";
+            console.log(globalVar);
+            console.log(localVar);
+        }
+
+        checkScope();
+        //console.log(localVar)
+    </script>
+</body>
+</html>
