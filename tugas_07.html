@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengelolaan Lowongan Pekerjaan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 0;
             padding: 20px;
         }
+
         h1 {
             text-align: center;
             color: #333;
         }
+
         .container {
             max-width: 600px;
             margin: auto;
@@ -23,13 +26,16 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        input[type="text"], input[type="date"] {
+
+        input[type="text"],
+        input[type="date"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         button {
             background-color: #28a745;
             color: white;
@@ -40,12 +46,15 @@
             width: 100%;
             margin: 5px 0;
         }
+
         button:hover {
             background-color: #218838;
         }
+
         #jobList {
             margin-top: 20px;
         }
+
         .job-item {
             background: #e9ecef;
             padding: 10px;
@@ -109,19 +118,24 @@
         }
     </script>
 </head>
+
 <body>
     <div class="container">
         <h1>Pengelolaan Lowongan Pekerjaan</h1>
-        <input type="text" id="id" placeholder="ID" />
-        <input type="text" id="title" placeholder="Judul" />
-        <input type="text" id="posisi" placeholder="Posisi" />
-        <input type="text" id="description" placeholder="Deskripsi" />
-        <input type="date" id="date" placeholder="Tanggal" /><br>
-        <button onclick="addJob()">Tambah Lowongan</button>
-        <button onclick="updateJob()">Perbaharui Lowongan</button>
-        <button onclick="deleteJob()">Hapus Lowongan</button>
-        <button onclick="getJob()">Cari Lowongan</button>
+        <input type="text" id="id" class="form-control" placeholder="ID" />
+        <input type="text" id="title" class="form-control" placeholder="Judul" />
+        <input type="text" id="posisi" class="form-control" placeholder="Posisi" />
+        <input type="text" id="description" class="form-control" placeholder="Deskripsi" />
+        <input type="date" id="date" class="form-control" placeholder="Tanggal" /><br>
+        <button class="btn btn-success" onclick="addJob()">Tambah Lowongan</button>
+        <button class="btn btn-warning" onclick="updateJob()">Perbaharui Lowongan</button>
+        <button class="btn btn-danger" onclick="deleteJob()">Hapus Lowongan</button>
+        <button class="btn btn-info" onclick="getJob()">Cari Lowongan</button>
         <div id="jobList"></div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
