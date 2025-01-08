@@ -1,0 +1,1 @@
+INSERT INTO buku_tamu (nama, pesan) VALUES ('Deni', 'Semangat!!!'),('Haryanto','Semangat!!');

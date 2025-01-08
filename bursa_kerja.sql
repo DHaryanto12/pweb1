@@ -1,0 +1,1 @@
+INSERT INTO bursa_kerja (posisi, perusahaan, tanggal) VALUES ('penulis','cv.pencari cinta sejati','12/08/1990');
